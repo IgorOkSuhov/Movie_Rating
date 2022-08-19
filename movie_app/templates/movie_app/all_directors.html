@@ -1,0 +1,10 @@
+{% extends 'movie_app/base.html' %}
+
+{% block title %} Все Режисеры {% endblock %}
+{% block content %}
+    <ul>
+        {% for director in Director.movie_set.all %}
+            <li>{{ director }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
